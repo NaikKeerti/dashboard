@@ -7,10 +7,9 @@ const FooterWrapper = styled.div`
   width :100%;
   background-color: lightgray;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items:center ;
   padding: 120px 60px;
-  flex-direction:column;
   row-gap: 50px;
 
 `;
@@ -46,12 +45,64 @@ const CopyRights = styled.div`
 `
 
 
+const  ListWrapper = styled.ul`
+    list-style-type: none;
+    font-size: 16px;
+    padding: 20px 0;
+    font-weight: 500;
 
+
+`
+
+const List = styled.li`
+
+padding: 5px;
+      cursor: pointer;
+      &&:hover{
+        text-decoration: underline;
+      }
+`
+
+const Text = styled.div`
+padding-top: 15px;
+ font-size: 18px;
+ text-align: left;
+ font-weight: 500;
+ line-height: 30px;
+
+`
 const Footer = () => {
   return (
     <>
     <FooterWrapper>
-           <Logo src="https://meolaa.com/images/app_images/brand-logo.png" />
+      <div style={{width:'400px'}}>
+      <Logo src="https://meolaa.com/images/app_images/brand-logo.png" />
+      <Text>
+      Meolaa is a one stop shop for the best D2C Brands in India.
+      We have collected the best and most reliable sellers all under one roof.
+      </Text>
+
+      </div>
+      <div style={{fontWeight:600,fontSize:'18px',width:'250px'}} >
+
+        MEOLAA
+        <ListWrapper>
+          <List>About</List>
+          <List>Contact Us</List>
+          <List>Blog</List>
+          <List>Join as a Brand</List>
+        </ListWrapper>
+      </div>
+      <div style={{fontWeight:600,fontSize:'18px',width:'250px'}} >
+        QUICK LINKS
+        <ListWrapper>
+          <List>Orders & Shipping</List>
+          <List>Returns & Refunds</List>
+          <List>FAQs</List>
+          <List>Privacy Policy</List>
+          <List>Terms & Condition</List>
+        </ListWrapper>
+      </div>
            <SocialLinks>
            <Icons><FontAwesomeIcon icon={faFacebook}/></Icons>
            <Icons><FontAwesomeIcon icon={faInstagram}/></Icons>
@@ -61,7 +112,7 @@ const Footer = () => {
            <Icons><FontAwesomeIcon icon={faLinkedin}/></Icons>
            <Icons><FontAwesomeIcon icon={faInstagram}/></Icons>
            </SocialLinks>
-    </FooterWrapper>
+            </FooterWrapper>
                <CopyRights> copyrights@2024 </CopyRights>
                </>
 
