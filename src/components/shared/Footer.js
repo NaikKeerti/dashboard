@@ -20,12 +20,12 @@ const Logo = styled.img`
 `;
 
 const SocialLinks = styled.div`
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap:35px;
-
-        
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:35px;
+    background-color: lightgray;
 `
 
 const Icons = styled.span`
@@ -103,16 +103,15 @@ const Footer = () => {
           <List>Terms & Condition</List>
         </ListWrapper>
       </div>
-           <SocialLinks>
+           
+            </FooterWrapper>
+            <SocialLinks>
            <Icons><FontAwesomeIcon icon={faFacebook}/></Icons>
            <Icons><FontAwesomeIcon icon={faInstagram}/></Icons>
            <Icons><FontAwesomeIcon icon={faTwitter}/></Icons>
            <Icons><FontAwesomeIcon icon={faLinkedin}/></Icons>
            <Icons><FontAwesomeIcon icon={faYoutube}/></Icons>
-           <Icons><FontAwesomeIcon icon={faLinkedin}/></Icons>
-           <Icons><FontAwesomeIcon icon={faInstagram}/></Icons>
            </SocialLinks>
-            </FooterWrapper>
                <CopyRights> copyrights@2024 </CopyRights>
                </>
 
