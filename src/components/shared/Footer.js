@@ -9,7 +9,7 @@ const FooterWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items:center ;
-  padding: 120px 60px;
+  padding: 60px;
   row-gap: 50px;
 
 `;

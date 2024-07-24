@@ -10,21 +10,22 @@ const CarouselContainer = styled.div`
 `;
 
 const CarouselWrapper = styled.div`
+  display: flex;
   width: 100%;
   transition: transform 0.5s ease-in-out;
+  justify-content: space-between;
+
 `;
 
 const CarouselSlide = styled.div`
   width: 100%;
   box-sizing: border-box;
   display: flex;
-  justify-content: space-between;
   gap: 20px;
-  padding-right: 20px ;
+  padding: auto  ;
 `;
 
 const CarouselImage = styled.img`
-  width: 50%;
   height: auto;
   border-radius: 25px;
   border: 1px transparent;
@@ -50,39 +51,40 @@ const Indicator = styled.span`
 const Carousel = ({ interval = 3000 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-//   const goToNextSlide = () => {
-//     setCurrentIndex((prevIndex) => (prevIndex + 1) % ImageList.length);
-//   };
+  const goToNextSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % ImageList.length);
+  };
 
-//   useEffect(() => {
-//     const intervalId = setInterval(goToNextSlide, interval);
+  useEffect(() => {
+    const intervalId = setInterval(goToNextSlide, interval);
 
-//     return () => {
-//       clearInterval(intervalId);
-//     };
-//   }, [interval]);
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, [interval]);
 
   return (
     <CarouselContainer>
       <CarouselWrapper style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
-        {/* {ImageList.map((image, index) => (
-          <CarouselSlide key={index}>
+      <CarouselSlide>
+        {ImageList.map((image, index) => (
+         <>
             <CarouselImage src={image.url} alt={`Slide ${index + 1}`} />
+            <CarouselImage src={image.url2} alt={`Slide ${index + 1}`} />
+            </>
+  
+        ))}
           </CarouselSlide>
-        ))} */}
-         <CarouselSlide >
-            <CarouselImage src="https://meolaa-cdn.gumlet.io/storeLogo/0/0/large/25_1721585474?w=900&q=70&h=undefined" />
-            <CarouselImage src="https://meolaa-cdn.gumlet.io/storeLogo/0/0/large/28_1721585549?w=900&q=70&h=undefined" />
-          </CarouselSlide>
+      
       </CarouselWrapper>
-      {/* <CarouselIndicators>
+      <CarouselIndicators>
         {ImageList.map((_, index) => (
           <Indicator
             key={index}
             active={currentIndex === index}
           />
         ))}
-      </CarouselIndicators> */}
+      </CarouselIndicators>
     </CarouselContainer>
   );
 };

@@ -121,6 +121,7 @@ export const ImageList = [
   id:1,
   name:'Category1',
   url:'https://meolaa-cdn.gumlet.io/storeLogo/0/0/large/25_1721585474?w=900&q=70&h=undefined',
+  url2:'https://meolaa-cdn.gumlet.io/storeLogo/0/0/large/26_1721585618?w=900&q=70&h=undefined',
   title:'',
   description:''
 },
@@ -128,6 +129,7 @@ export const ImageList = [
   id:2,
   name:'Category2',
   url:'https://meolaa-cdn.gumlet.io/storeLogo/0/0/large/28_1721585549?w=900&q=70&h=undefined',
+  url2:'https://meolaa-cdn.gumlet.io/storeLogo/0/0/large/25_1721585474?w=900&q=70&h=undefined',
   title:'',
   description:''
 },
@@ -135,6 +137,7 @@ export const ImageList = [
   id:3,
   name:'Category3',
   url:'https://meolaa-cdn.gumlet.io/storeLogo/0/0/large/26_1721585618?w=900&q=70&h=undefined',
+  url2:'https://meolaa-cdn.gumlet.io/storeLogo/0/0/large/27_1721585724?w=900&q=70&h=undefined',
   title:'',
   description:''
 },
@@ -142,6 +145,7 @@ export const ImageList = [
   id:4,
   name:'Category4',
   url:'https://meolaa-cdn.gumlet.io/storeLogo/0/0/large/27_1721585724?w=900&q=70&h=undefined',
+  url2:'https://meolaa-cdn.gumlet.io/storeLogo/0/0/large/28_1721585549?w=900&q=70&h=undefined',
   title:'',
   description:''
 }
